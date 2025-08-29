@@ -99,9 +99,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 0.5rem;
-    }
     .markdown-body {
         padding: 1rem;
         font-size: 0.95rem;
