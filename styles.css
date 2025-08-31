@@ -1,39 +1,10 @@
-:root {
-    --bg-light: #f5f7fa;
-    --fg-light: #1a1a1a;
-    --card-bg-light: #ffffff;
-
-    --bg-dark: #000000;
-    --fg-dark: #e6edf3;
-    --card-bg-dark: #0d1117;
-
-    --bg: var(--bg-light);
-    --fg: var(--fg-light);
-    --card-bg: var(--card-bg-light);
-
-    --navbar-bg: #000000;
-    --navbar-bg-dark: #161b22;
-
-    --btn-bg: #e67e22;
-    --btn-fg: #ffffff;
-    --btn-hover: #d35400;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: var(--bg-dark);
-        --fg: var(--fg-dark);
-        --card-bg: var(--card-bg-dark);
-        --navbar-bg: var(--navbar-bg-dark);
-    }
-}
-
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background: var(--bg);
-    color: var(--fg);
+    background: url("winter_morning_by_mma1r_diojysv.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +12,10 @@ body {
 
 .navbar {
     width: 100%;
-    background: var(--navbar-bg);
+    max-width: 800px;
+    margin: 0 auto; 
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);  
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -49,8 +23,10 @@ body {
     padding: 1rem 2rem;
     box-sizing: border-box;
     margin-bottom: 20px;
-    top: 0;
-    position: sticky;
+    position: relative;
+    top: auto;
+    border-radius: 0px 0px 16px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
@@ -58,17 +34,16 @@ body {
     font-size: 1.2rem;
 }
 
-.nav-right .btn-blog {
-    background-color: var(--btn-bg);
-    color: var(--btn-fg);
-    padding: 0.5rem 1rem;
+.nav-right .nav-link {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.2s;
+    margin-left: 20px;
+    transition: color 0.2s;
 }
 
-.nav-right .btn-blog:hover {
-    background-color: var(--btn-hover);
+.nav-right .nav-link:hover {
+    color: #e67e22;
 }
 
 .avatar {
@@ -80,18 +55,22 @@ body {
 .avatar img {
     width: 150px;
     height: 150px;
-    border: 3px solid #30363d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 100%;
 }
 
 .markdown-body {
     width: 100%;
     max-width: 800px;
-    background: var(--card-bg);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);  
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     box-sizing: border-box;
     overflow-x: auto;
     margin: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .markdown-body img {
