@@ -2,12 +2,22 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background: url("winter_morning_by_mma1r_diojysv.png") no-repeat center center fixed;
-    background-size: cover;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("seaside_by_mma1r_dk26pw5.png") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
 }
 
 .navbar {
@@ -15,7 +25,7 @@ body {
     max-width: 800px;
     margin: 0 auto; 
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);  
+    backdrop-filter: blur(16px);  
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -63,8 +73,8 @@ body {
     width: 100%;
     max-width: 800px;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);  
-    padding: 1.5rem;
+    backdrop-filter: blur(16px);  
+    padding: 2rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     box-sizing: border-box;
     overflow-x: auto;
@@ -77,7 +87,7 @@ body {
     max-width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .markdown-body {
         padding: 1rem;
         font-size: 0.95rem;
