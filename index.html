@@ -1,93 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Profile Web</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    />
-    <style>
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fadeInUp {
-            animation: fadeInUp 1s ease-out forwards;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile Card</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
-<body
-    class="bg-cover bg-center min-h-screen flex items-center justify-center p-6"
-    style="background-image: url('assets/seaside_by_mma1r_dk26pw5.png');"
->
-    <div
-        class="relative bg-black/50 backdrop-blur-md shadow-2xl rounded-3xl p-8 w-full max-w-md text-center border border-white/20 animate-fadeInUp"
-    >
-        <div class="flex items-center gap-6 border-b border-gray-600 pb-6">
-            <img
-                src="https://github.com/naufalfaisa.png"
-                alt="Avatar"
-                class="w-32 h-32 rounded-xl shadow-lg object-cover"
-            />
-            <div class="flex-1 text-left">
-                <h2 class="text-3xl font-semibold text-white">Naufal</h2>
-                <div class="flex gap-5 mt-4 text-3xl text-gray-300">
-                    <a
-                        href="https://facebook.com/naufalfaisa17"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="hover:text-white"
-                        aria-label="Facebook"
-                    ><i class="fab fa-facebook"></i></a>
-                    <a
-                        href="https://twitter.com/naufalfaisa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="hover:text-white"
-                        aria-label="Twitter"
-                    ><i class="fab fa-x-twitter"></i></a>
-                    <a
-                        href="https://instagram.com/naufalfaisa_"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="hover:text-white"
-                        aria-label="Instagram"
-                    ><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="flex gap-6 mt-5 text-lg font-medium text-gray-300">
-                    <a
-                        href="https://github.com/naufalfaisa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="hover:text-white"
-                    >GitHub</a>
-                    <a
-                        href="https://blog.naufalfaisa.my.id"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="hover:text-white"
-                    >Blog</a>
-                </div>
+<body>
+
+	<div class="card top-card">
+		<div class="top-bar">
+			<div class="welcome">ウエルカム</div>
+			<a href="https://blog.naufalfaisa.my.id/" target="_blank">Blog</a>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="profile">
+            <div class="avatar">
+                <img id="github-avatar" src="https://github.com/naufalfaisa.png" alt="Avatar">
             </div>
-        </div>
-        <div class="mt-8">
-            <img
-                src="https://lastfm-recently-played.vercel.app/api?user=naufalfaisa&width=500"
-                alt="Last.fm Recently Played"
-                class="w-full rounded-xl shadow-lg border border-gray-700 object-contain"
-            />
-        </div>
-    </div>
+			<div class="info">
+				<h2>Naufal Faisa</h2>
+				<p>Computer science student</p>
+				<div class="socials">
+					<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+					<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="extra-img">
+			<img src="assets/bocchi-the-rock-characters-train-ride-g98icngc2429boex.jpg" alt="Bocchi the Rock">
+		</div>
+		<div class="lastfm">
+			<img src="https://lastfm-recently-played.vercel.app/api?user=naufalfaisa&width=500" alt="Last.fm Recently Played">
+		</div>
+	</div>
+
+	<button id="darkToggle" class="dark-toggle"><i class="fas fa-moon"></i></button>
+
+	<script>
+		const toggle = document.getElementById('darkToggle');
+		toggle.addEventListener('click', () => {
+			document.documentElement.classList.toggle('dark');
+		});
+	</script>
 </body>
 </html>
